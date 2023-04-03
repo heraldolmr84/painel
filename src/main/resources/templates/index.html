@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel De Chamadas</title>
+
+    <link rel="stylesheet" href="/webjars/bootstrap/5.2.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+    <main>
+
+        <div id="data-hora">
+
+        </div>
+
+        <div class="container" id="chamada">
+            <h1>Sala 1</h1>
+            <h2>Trocar bobina</h2>
+        </div>        
+
+        <div class="container" id="historico">
+            <h3>Histórico</h3>
+            <hr>
+            
+            <table class="table table-bordered table-hover">
+                <thead>
+                    <th scope="col">Sala</th>
+                    <th scope="col">Ação</th>
+                    <th scope="col">Data/Hora</th>
+                </thead>
+                <tbody>
+                    <tr scope="row" th:each="alunos : ${alunosList}">
+                        <!--<td th:text="${alunos.nome}"></td>
+                        <td th:text="${alunos.curso}"></td>
+                        <td th:text="${alunos.matricula}"></td>
+                        <td th:text="${alunos.turno}"></td>
+                        <td th:text="${alunos.status}"></td>
+                        <td>
+                            <a href="" class="btn btn-success" th:href="@{alterar/{id}(id=${alunos.id})}"><i class="fas fa-edit"></i></a>
+                            <a href="" class="btn btn-danger" th:href="@{excluir/{id}(id=${alunos.id})}"><i class="fas fa-times"></i></a>
+                        </td>-->
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </main>
+
+    <script src="/js/script.js"></script>
+    
+</body>
+</html>

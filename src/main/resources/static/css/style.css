@@ -1,0 +1,48 @@
+@charset "utf-8";
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+main {
+    min-height: 768px;
+}
+
+#chamada {
+    height: 150px;
+    width: 90%;
+    background-color: #4682B4;
+    margin-top: 40px;
+    border-radius: 25px;
+}
+
+#chamada h1 {
+    color: red;
+    font-size: 6em ;
+    margin-top: 1%;
+    margin-left: 60px;
+}
+
+#chamada h2 {
+    color: #FFF;
+    font-size: 6em;
+    margin-left: 80px;
+}
+
+#chamada h1, h2 {
+    display: inline-flex;
+    overflow: hidden;
+}
+
+#data-hora {
+    text-align: center;
+    margin: 25px 0 15px 0;
+    font-size: 2em;
+    color: blue;
+    font-weight: bold;
+}
+
+#historico {
+    margin-top: 30px;
+}
