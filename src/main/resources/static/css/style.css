@@ -10,7 +10,7 @@ main {
 }
 
 #chamada {
-    height: 150px;
+    height: 250px;
     width: 90%;
     background-color: #4682B4;
     margin-top: 40px;
@@ -19,20 +19,16 @@ main {
 
 #chamada h1 {
     color: red;
-    font-size: 6em ;
-    margin-top: 1%;
-    margin-left: 60px;
+    font-size: 7em ;
+    margin-top: 45px;
+    text-align: center;
 }
 
 #chamada h2 {
     color: #FFF;
     font-size: 6em;
-    margin-left: 80px;
-}
-
-#chamada h1, h2 {
-    display: inline-flex;
-    overflow: hidden;
+    width: 100%;
+    margin-top: 55px;
 }
 
 #data-hora {
@@ -45,4 +41,28 @@ main {
 
 #historico {
     margin-top: 30px;
+}
+
+/*Painel de Botões*/
+
+.titulo_painel {
+    text-align: center;
+    margin: 25px ;
+}
+
+.painelBotoes {
+    padding: 5%;
+    text-align: center;
+}
+
+.painelBotoes a .btn {
+    margin: 10px;
+    height: 200px;
+    width: 90%;
+}
+
+.painelBotoes a .btn span {
+    position: relative;
+    top: 35%;
+    font-size: 1.8em;
 }

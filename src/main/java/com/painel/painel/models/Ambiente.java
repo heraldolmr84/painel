@@ -22,13 +22,6 @@ public class Ambiente {
 
     @Column(length = 100, name = "nome_ambiente")
     @NotEmpty(message = "O nome não pode ficar em branco!")
-    private String nome;
-
-    public Ambiente(Integer id, String nome) {
-
-        super();
-        this.id = id;
-        this.nome = nome;
-    }     
+    private String nome;  
     
 }
