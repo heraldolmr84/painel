@@ -34,6 +34,27 @@
         
     </div>
 
-    <script src="/js/script.js"></script>    
+    <div id="list_ambiente" class="container">
+        <h3>Ambientes Cadastrados</h3>
+        <hr>
+
+        <table class="table table-bordered table-hover">
+            <thead>
+                <th scope="col">ID</th>
+                <th scope="col">Nome</th>
+            </thead>
+            <tbody>
+                <tr scope="row" th:each="ambientes : ${ambiente}">
+                    <td th:text="${ambientes.id}"></td>
+                    <td th:text="${ambientes.nome}"></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <script src="/js/script.js"></script>
+
+    <script src="/webjars/jquery/3.6.3/jquery.min.js"></script>
+    <script src="/webjars/bootstrap/js/bootstrap.min.js"></script>
 </body>
 </html>

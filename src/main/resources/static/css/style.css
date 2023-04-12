@@ -66,3 +66,8 @@ main {
     top: 35%;
     font-size: 1.8em;
 }
+
+/*Tela de Cadastro de Ambientes*/
+#list_ambiente {
+    margin-top: 35px;
+}

@@ -1,5 +1,7 @@
 package com.painel.painel.services;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -16,5 +18,9 @@ public class AmbienteService {
 
         ar.save(ambiente);
         
+    }
+
+    public List<Ambiente> listAmbiente() {
+        return (List<Ambiente>) ar.findAll();
     }
 }
