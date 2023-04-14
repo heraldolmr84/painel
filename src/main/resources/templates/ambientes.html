@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Painel De Chamadas</title>
 
+    <script src="https://kit.fontawesome.com/006642858d.js"></script>
+
     <link rel="stylesheet" href="/webjars/bootstrap/5.2.3/css/bootstrap.min.css">
     <link rel="stylesheet" href="/css/style.css">
 </head>
@@ -28,7 +30,7 @@
             <div class="cadastro">
                 <br>
                 <button type="submit" class="btn btn-primary">Cadastrar</button>
-                <button type="button" class="btn btn-info">Voltar</button>
+                <a href="" th:href="@{/}"><button type="button" class="btn btn-info">Voltar</button></a> 
             </div>
         </form>
         
@@ -42,11 +44,16 @@
             <thead>
                 <th scope="col">ID</th>
                 <th scope="col">Nome</th>
+                <th scope="col">Ações</th>
             </thead>
             <tbody>
-                <tr scope="row" th:each="ambientes : ${ambiente}">
+                <tr scope="row" th:each="ambientes : ${list_ambiente}">
                     <td th:text="${ambientes.id}"></td>
                     <td th:text="${ambientes.nome}"></td>
+                    <td>
+                        <a th:href="@{alterar/{id}(id=${ambientes.id})}"><button class="btn btn-outline-success"><i class="fas fa-edit"></i></button></a>
+                        <a th:href="@{excluir/{id}(id=${ambientes.id})}"><button class="btn btn-outline-danger"><i class="fas fa-times"></i></button></a>                       
+                    </td>
                 </tr>
             </tbody>
         </table>

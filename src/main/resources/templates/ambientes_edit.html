@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel De Chamadas</title>
+
+    <script src="https://kit.fontawesome.com/006642858d.js"></script>
+
+    <link rel="stylesheet" href="/webjars/bootstrap/5.2.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+    <div class="container" id="form_cadastro">
+
+        <h1 class="titulo_painel">
+            Alterar Ambiente
+        </h1>
+
+        <hr>
+
+        <form action="/alterar" method="post" th:object="${ambiente}">
+
+            <input type="hidden" th:field="*{id}">
+
+            <div class="form-group">
+                <input type="text" th:field="*{nome}" placeholder="Informe o Nome no novo Ambiente" id="" class="form-control">
+            </div>
+
+            <div class="cadastro">
+                <br>
+                <button type="submit" class="btn btn-primary">Cadastrar</button>
+                <a th:href="@{/}"><button type="button" class="btn btn-info">Voltar</button></a> 
+            </div>
+        </form>
+        
+    </div>
+
+    <script src="/js/script.js"></script>
+
+    <script src="/webjars/jquery/3.6.3/jquery.min.js"></script>
+    <script src="/webjars/bootstrap/js/bootstrap.min.js"></script>
+</body>
+</html>
