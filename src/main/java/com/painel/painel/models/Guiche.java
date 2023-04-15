@@ -10,8 +10,10 @@ import jakarta.persistence.ManyToOne;
 import jakarta.validation.constraints.NotEmpty;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+@NoArgsConstructor
 @Entity
 @Getter
 @Setter
@@ -27,7 +29,7 @@ public class Guiche {
     private String nome;
 
     @ManyToOne
-    @JoinColumn(name = "id_ambiente")
+    @JoinColumn(name = "id_ambiente", nullable = false)
     private Ambiente ambiente;
 
 

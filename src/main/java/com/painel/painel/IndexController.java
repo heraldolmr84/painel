@@ -39,4 +39,12 @@ public class IndexController {
 
         return mv;
     }
+
+    @GetMapping("/chamarPainel")
+    public ModelAndView chamarPainel() {
+        
+        ModelAndView mv = new ModelAndView("guicheChamada");
+
+        return mv;
+    }
 }
