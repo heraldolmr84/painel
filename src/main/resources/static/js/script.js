@@ -20,3 +20,15 @@ const interval = setInterval(() => {
 
     document.getElementById('data-hora').innerHTML = dataHora;
 })
+
+//chamar no painel
+const frases = document.querySelectorAll("frase");
+
+frases.map((el) => {
+    el.addEventListener("click", (evt) => {
+
+        const vFrase = evt.target;
+
+        console.log(vFrase)
+    });
+});

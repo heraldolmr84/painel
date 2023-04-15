@@ -71,3 +71,41 @@ main {
 #list_ambiente {
     margin-top: 35px;
 }
+
+/*Tela de Guiche*/
+
+.btn-3d {
+    position: relative;
+    border: 0;
+    transition: all 40ms linear;
+    margin: 10px 2px;
+    text-align: center;
+    width: 100%;
+}
+
+.btn-3d p {
+    margin-top: 7px;
+}
+
+.btn-3d:active:focus,
+.btn-3d:focus:hover,
+.btn-3d:focus {
+    -moz-outiline-style: none;
+    outline: medium none;
+}
+
+.btn-3d:active,
+.btn-3d.active {
+    top: 2px;
+}
+
+.btn-3d.btn-primary {
+    box-shadow: 0 0 0 1px #417fbd inset, 0 0 0 2px rgba(255, 255, 255, 0.15) inset, 0 8px 0 0 #4d5bbe, 0 8px 8px 1px rgba(0, 0, 0, 0.5);
+    background-color: #4274d7;
+}
+
+.btn-3d.btn-primary:active,
+.btn-3d.btn-primary.btn-3d:active {
+    box-shadow: 0 0 0 1px #417fbd inset, 0 0 0 1px rgba(255, 255, 255, .15) inset, 0 1px 3px 1px rgba(0, 0, 0, .3);
+    background-color: #4274d7;
+}
