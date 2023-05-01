@@ -16,12 +16,14 @@
     <div class="container" id="form_cadastro">
 
         <h1 class="titulo_painel">
-            Cadastro de Guiches
+            Editar Guiche
         </h1>
 
         <hr>
 
-        <form action="saveGuiche" method="post" th:object="${guiche}">
+        <form action="/alterarGuiche" method="post" th:object="${guiche}">
+
+            <input type="hidden" th:field="*{id}">
 
             <div class="form-group col-md-6">
                 <input type="text" th:field="*{nome}" placeholder="Informe o Nome no novo Guiche" id="nome" class="form-control" autofocus="autofocus">
@@ -39,35 +41,10 @@
             <div class="cadastro">
                 <br>
                 <button type="submit" class="btn btn-primary">Cadastrar</button>
-                <a href="" th:href="@{/}"><button type="button" class="btn btn-info">Voltar</button></a> 
+                <a th:href="@{/guicheCadastro}"><button type="button" class="btn btn-info">Voltar</button></a> 
             </div>
         </form>
         
-    </div>
-
-    <div id="list_guiche" class="container">
-        <h3>Ambientes Cadastrados</h3>
-        <hr>
-
-        <table class="table table-bordered table-hover">
-            <thead>
-                <th scope="col">ID</th>
-                <th scope="col">Nome Guiche</th>
-                <th scope="col">Local</th>
-                <th scope="col">Ações</th>
-            </thead>
-            <tbody>
-                <tr scope="row" th:each="g : ${list_guiche}">
-                    <td th:text="${g.id}"></td>
-                    <td th:text="${g.nome}"></td>
-                    <td th:text="${g.ambiente.nome}"></td>
-                    <td>
-                        <a th:href="@{alterarGuiche/{id}(id=${g.id})}"><button class="btn btn-outline-success"><i class="fas fa-edit"></i></button></a>
-                        <a th:href="@{excluirGuiche/{id}(id=${g.id})}"><button class="btn btn-outline-danger"><i class="fas fa-times"></i></button></a>                       
-                    </td>
-                </tr>
-            </tbody>
-        </table>
     </div>
 
     <script src="/js/script.js"></script>

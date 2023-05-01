@@ -6,13 +6,18 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.painel.painel.models.Ambiente;
+import com.painel.painel.models.Guiche;
 import com.painel.painel.repositories.AmbienteRepository;
+import com.painel.painel.repositories.GuicheRepository;
 
 @Controller
 public class IndexController {
 
     @Autowired
     private AmbienteRepository ar;
+
+    @Autowired
+    private GuicheRepository gr;
     
     @GetMapping("/")
     public ModelAndView index() {
@@ -33,9 +38,21 @@ public class IndexController {
     public ModelAndView ambiente() {
 
         ModelAndView mv = new ModelAndView("ambientes");
-        mv.addObject("ambiente", new Ambiente());
 
+        mv.addObject("ambiente", new Ambiente());
         mv.addObject("list_ambiente", ar.findAll());
+
+        return mv;
+    }
+
+    @GetMapping("/guicheCadastro")
+    public ModelAndView guiches() {
+
+        ModelAndView mv = new ModelAndView("guiches");
+
+        mv.addObject("guiche", new Guiche());
+        mv.addObject("list_ambiente", ar.findAll());
+        mv.addObject("list_guiche", gr.findAll());
 
         return mv;
     }
