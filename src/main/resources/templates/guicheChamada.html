@@ -29,10 +29,8 @@
                     <label for="floatingSelect">Escolha o Local</label>
 
                     <select class="form-select floatingSelect" aria-label="Floating label select example">
-                        <option selected>Open this select menu</option>
-                        <option value="1">One</option>
-                        <option value="2">Two</option>
-                        <option value="3">Three</option>
+                        <option selected>Escolha o Local</option>
+                        <option th:each="a : ${list_ambiente}" th:value="${a.id}" th:text="${a.nome}">One</option>
                     </select>                                        
                 </div>
 
@@ -41,10 +39,8 @@
                     <label for="floatingSelect">Escolha o Guiche</label>
 
                     <select class="form-select floatingSelect" aria-label="Floating label select example">
-                        <option selected>Open this select menu</option>
-                        <option value="1">One</option>
-                        <option value="2">Two</option>
-                        <option value="3">Three</option>
+                        <option selected>Escolha o guiche para a chamada</option>
+                        <option th:each="g : ${list_guiche}" th:value="${g.id}" th:text="${g.nome}">One</option>
                     </select>                                        
                 </div>
             </div>           

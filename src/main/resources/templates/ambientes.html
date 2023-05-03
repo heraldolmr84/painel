@@ -21,7 +21,7 @@
 
         <hr>
 
-        <form th:action="@{ambienteCadastro/saveAmbient}" method="post" th:object="${ambiente}">
+        <form th:action="@{/saveAmbient}" method="post" th:object="${ambiente}">
 
             <div class="form-group">
                 <input type="text" th:field="*{nome}" placeholder="Informe o Nome no novo Ambiente" id="" class="form-control">
