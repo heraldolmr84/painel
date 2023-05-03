@@ -16,15 +16,15 @@
     <div class="container" id="form_cadastro">
 
         <h1 class="titulo_painel">
-            Cadastro de Guiches
+            Cadastro de Frases
         </h1>
 
         <hr>
 
-        <form th:action="@{/saveGuiche}" method="post" th:object="${guiche}">
+        <form th:action="@{/saveFrase}" method="post" th:object="${frase}">
 
             <div class="form-group col-md-6">
-                <input type="text" th:field="*{nome}" placeholder="Informe o Nome no novo Guiche" id="nome" class="form-control" autofocus="autofocus">
+                <input type="text" th:field="*{frase}" placeholder="Digite a Frase a ser chamada no painel..." id="frase" class="form-control" autofocus="autofocus">
             </div>
 
             <div class="form-group col-md-4">
@@ -45,25 +45,25 @@
         
     </div>
 
-    <div id="list_guiche" class="container">
+    <div id="list_frase" class="container">
         <h3>Ambientes Cadastrados</h3>
         <hr>
 
         <table class="table table-bordered table-hover">
             <thead>
                 <th scope="col">ID</th>
-                <th scope="col">Nome Guiche</th>
+                <th scope="col">Frase</th>
                 <th scope="col">Local</th>
                 <th scope="col">Ações</th>
             </thead>
             <tbody>
-                <tr scope="row" th:each="g : ${list_guiche}">
-                    <td th:text="${g.id}"></td>
-                    <td th:text="${g.nome}"></td>
-                    <td th:text="${g.ambiente.nome}"></td>
+                <tr scope="row" th:each="f : ${list_frase}">
+                    <td th:text="${f.id}"></td>
+                    <td th:text="${f.frase}"></td>
+                    <td th:text="${f.ambiente.nome}"></td>
                     <td>
-                        <a th:href="@{guicheCadastro/alterarGuiche/{id}(id=${g.id})}"><button class="btn btn-outline-success"><i class="fas fa-edit"></i></button></a>
-                        <a th:href="@{excluirGuiche/{id}(id=${g.id})}"><button class="btn btn-outline-danger"><i class="fas fa-times"></i></button></a>                       
+                        <a th:href="@{fraseCadastro/alterarFrase/{id}(id=${f.id})}"><button class="btn btn-outline-success"><i class="fas fa-edit"></i></button></a>
+                        <a th:href="@{excluirFrase/{id}(id=${f.id})}"><button class="btn btn-outline-danger"><i class="fas fa-times"></i></button></a>                       
                     </td>
                 </tr>
             </tbody>

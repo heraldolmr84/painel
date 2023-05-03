@@ -20,9 +20,19 @@ public class AmbientesController {
 
     @Autowired
     private AmbienteRepository ar;
-    
 
-    @PostMapping("saveAmbient")
+    @GetMapping("/ambienteCadastro")
+    public ModelAndView ambiente() {
+
+        ModelAndView mv = new ModelAndView("ambientes");
+
+        mv.addObject("ambiente", new Ambiente());
+        mv.addObject("list_ambiente", ar.findAll());
+
+        return mv;
+    }    
+
+    @PostMapping("/saveAmbient")
     public ModelAndView save(Ambiente ambiente) {
 
         ModelAndView mv = new ModelAndView();
@@ -34,7 +44,7 @@ public class AmbientesController {
         return mv;
     }
 
-    @GetMapping("alterar/{id}")
+    @GetMapping("ambienteCadastro/alterar/{id}")
     public ModelAndView alterar(@PathVariable("id") Integer id) {
 
         ModelAndView mv = new ModelAndView();

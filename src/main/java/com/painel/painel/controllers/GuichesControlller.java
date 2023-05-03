@@ -24,7 +24,19 @@ public class GuichesControlller {
     @Autowired
     private AmbienteRepository ambienteRepository;
 
-    @PostMapping("saveGuiche")
+    @GetMapping("/guicheCadastro")
+    public ModelAndView guiches() {
+
+        ModelAndView mv = new ModelAndView("guiches");
+
+        mv.addObject("guiche", new Guiche());
+        mv.addObject("list_ambiente", ambienteRepository.findAll());
+        mv.addObject("list_guiche", guicheRepository.findAll());
+
+        return mv;
+    }
+
+    @PostMapping("/saveGuiche")
     public ModelAndView save(Guiche guiche) {
 
         ModelAndView mv = new ModelAndView();
@@ -36,7 +48,7 @@ public class GuichesControlller {
         return mv;
     }
 
-    @GetMapping("alterarGuiche/{id}")
+    @GetMapping("guicheCadastro/alterarGuiche/{id}")
     public ModelAndView alterarGuiche(@PathVariable("id") Integer id) {
 
         ModelAndView mv = new ModelAndView();

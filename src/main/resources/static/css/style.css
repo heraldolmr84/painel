@@ -61,10 +61,10 @@ main {
     width: 90%;
 }
 
-.painelBotoes a .btn span {
+.painelBotoes a div span {
     position: relative;
     top: 35%;
-    font-size: 1.8em;
+    font-size: 1.5em;
 }
 
 /*Tela de Cadastro de Ambientes*/

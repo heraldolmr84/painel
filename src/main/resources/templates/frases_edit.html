@@ -16,17 +16,17 @@
     <div class="container" id="form_cadastro">
 
         <h1 class="titulo_painel">
-            Editar Guiche
+            Cadastro de Frases
         </h1>
 
         <hr>
 
-        <form th:action="@{/alterarGuiche}" method="post" th:object="${guiche}">
+        <form th:action="@{/alterarFrase}" method="post" th:object="${frase}">
 
             <input type="hidden" th:field="*{id}">
 
             <div class="form-group col-md-6">
-                <input type="text" th:field="*{nome}" placeholder="Informe o Nome no novo Guiche" id="nome" class="form-control" autofocus="autofocus">
+                <input type="text" th:field="*{frase}" placeholder="Digite a Frase a ser chamada no painel..." id="frase" class="form-control" autofocus="autofocus">
             </div>
 
             <div class="form-group col-md-4">
@@ -41,7 +41,7 @@
             <div class="cadastro">
                 <br>
                 <button type="submit" class="btn btn-primary">Alterar</button>
-                <a th:href="@{/guicheCadastro}"><button type="button" class="btn btn-info">Cancelar</button></a> 
+                <a href="" th:href="@{/fraseCadastro}"><button type="button" class="btn btn-info">Cancelar</button></a> 
             </div>
         </form>
         

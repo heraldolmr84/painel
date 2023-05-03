@@ -21,7 +21,7 @@
 
         <hr>
 
-        <form action="saveAmbient" method="post" th:object="${ambiente}">
+        <form th:action="@{ambienteCadastro/saveAmbient}" method="post" th:object="${ambiente}">
 
             <div class="form-group">
                 <input type="text" th:field="*{nome}" placeholder="Informe o Nome no novo Ambiente" id="" class="form-control">
@@ -51,7 +51,7 @@
                     <td th:text="${ambientes.id}"></td>
                     <td th:text="${ambientes.nome}"></td>
                     <td>
-                        <a th:href="@{alterar/{id}(id=${ambientes.id})}"><button class="btn btn-outline-success"><i class="fas fa-edit"></i></button></a>
+                        <a th:href="@{ambienteCadastro/alterar/{id}(id=${ambientes.id})}"><button class="btn btn-outline-success"><i class="fas fa-edit"></i></button></a>
                         <a th:href="@{excluir/{id}(id=${ambientes.id})}"><button class="btn btn-outline-danger"><i class="fas fa-times"></i></button></a>                       
                     </td>
                 </tr>

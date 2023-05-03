@@ -22,7 +22,7 @@ const interval = setInterval(() => {
 })
 
 //chamar no painel
-const frases = document.querySelectorAll("frase");
+const frases = document.querySelectorAll(".frase");
 
 frases.map((el) => {
     el.addEventListener("click", (evt) => {

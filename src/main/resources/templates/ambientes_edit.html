@@ -21,7 +21,7 @@
 
         <hr>
 
-        <form action="/alterar" method="post" th:object="${ambiente}">
+        <form th:action="@{/alterar}" method="post" th:object="${ambiente}">
 
             <input type="hidden" th:field="*{id}">
 
